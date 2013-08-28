@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        
+        <link rel="stylesheet" type="text/css" href="css/colorolo.css">
+        <title>Colorolo</title>
+    </head>
+    <body>
+        <!--prefetching images on homepage-->
+            <img src="img/animals.jpg" class="hide"/>
+            <img src="img/food.jpg" class="hide"/>
+            <img src="img/people.jpg" class="hide"/>
+            <img src="img/landscape.jpg" class="hide"/>
+            <img src="img/objects.jpg" class="hide"/>
+            <img src="img/plants.jpg" class="hide"/>
+            
+            <nav class="">
+               
+               <ul id="colorSelect">
+                    <li class="violet" data-color="violet"></li>
+                    <li class="indigo" data-color="indigo"></li>
+                    <li class="blue selected" data-color="blue"></li>
+                    <li class="green" data-color="green"></li>
+                    <li class="yellow" data-color="yellow"></li>
+                    <li class="orange" data-color="magenta"></li>
+                    <li class="red" data-color="yellow"></li>
+                    <li class="magenta" data-color="magenta"></li>
+                </ul>
+
+                <!--<div id="saveButton">Save</div>-->
+
+                <ul id="toolSelect">
+                  <li class="eraser" data-tool="eraser"> </li>  
+                  <li class="refresh" data-tool="clearCanvas"> </li>    
+                  <li class="crayon selected" data-tool="crayon" ></li>
+                  <li class="marker" data-tool="marker"></li>      
+                </ul>
+                
+               <div id="selectedSize" class="sizeMedium circle"></div>
+               <ul id="sizeSelector">
+                  <li data-size="small" class="sizeSmall circle"></li>
+                  <li data-size="normal" class="selected sizeMedium circle"></li>
+                  <li data-size="large" class="sizeLarge circle "></li>      
+                  <li data-size="huge" class="sizeHuge circle"></li>      
+                </ul>
+                
+            </nav>
+            
+            <div id="sound"></div>
+
+            <div id="colorPages" class="">
+                <div id="canvasDiv">
+                </div>
+            </div>
+            
+            <div id="categoryPicker" class="openCategoryPage">
+                <div class="categoryHeading">
+                    <span >What Do You Want To Color?</span>
+                </div>
+                <div id="allCategories" class="appear">
+                    <div id="people" class="category" category="people">People</div>
+                    <div id="animals" class="category" category="animals">Animals</div>
+                    <div id="plants" class="category" category="plants">Plants</div>
+                    <div id="landscape" class="category" category="places">Places</div>
+                    <div id="food" class="category" category="food">Food</div>
+                    <div id="objects" class="category" category="objects">Objects</div>
+                </div>
+                <div id="allColoringPages">
+                    <div id="backToCategories">Categories</div>
+                    <ul class="hide" category="people">
+                        <li class="browseItem" pageNumber="01"></li>
+                        <li class="browseItem" pageNumber="02"></li>
+                        <li class="browseItem" pageNumber="03"></li>
+                        <li class="browseItem" pageNumber="04"></li>
+                        <li class="browseItem" pageNumber="05"></li>
+                    </ul>
+                    <ul class="hide" category="animals">
+                        <li class="browseItem" pageNumber="01"></li>
+                        <li class="browseItem" pageNumber="02"></li>
+                        <li class="browseItem" pageNumber="03"></li>
+                        <li class="browseItem" pageNumber="04"></li>
+                        <li class="browseItem" pageNumber="05"></li>
+                    </ul>
+                    <ul class="hide" category="plants">
+                        <li class="browseItem" pageNumber="01"></li>
+                        <li class="browseItem" pageNumber="02"></li>
+                        <li class="browseItem" pageNumber="03"></li>
+                        <li class="browseItem" pageNumber="04"></li>
+                        <li class="browseItem" pageNumber="05"></li>
+                    </ul>
+                    <ul class="hide" category="places">
+                        <li class="browseItem" pageNumber="01"></li>
+                        <li class="browseItem" pageNumber="02"></li>
+                        <li class="browseItem" pageNumber="03"></li>
+                        <li class="browseItem" pageNumber="04"></li>
+                        <li class="browseItem" pageNumber="05"></li>
+                        <li class="browseItem" pageNumber="06"></li>
+                    </ul>
+                    <ul class="hide" category="food">
+                        <li class="browseItem" pageNumber="01"></li>
+                        <li class="browseItem" pageNumber="02"></li>
+                        <li class="browseItem" pageNumber="03"></li>
+                        <li class="browseItem" pageNumber="04"></li>
+                    </ul>
+                    <ul class="hide" category="objects">
+                    </ul>
+                </div>
+            </div>
+            
+             
+             <audio id="bgmusic" src="sound/bgmusic.mp3" loop>
+                Your browser isn't invited for super fun audio time.
+            </audio>
+             <audio id="swoosh" src="sound/swoosh.mp3">
+                Your browser isn't invited for super fun audio time.
+            </audio>
+             <audio id="tick" src="sound/click.wav">
+                Your browser isn't invited for super fun audio time.
+            </audio>
+            
+        
+        <!--<script type="text/javascript" src="cordova.js"></script>-->
+        <script type="text/javascript" src="js/jquery.js"></script>        
+        <script type="text/javascript" src="js/drawingApp.js"></script>
+        <script type="text/javascript" src="js/colorolo.js"></script>        
+        <script type="text/javascript" src="js/index.js"></script>        
+        <script type="text/javascript">
+            app.initialize();            
+        </script>
+        <!--script src="http://debug.phonegap.com/target/target-script-min.js#athahar"></script --> 
+    </body>
+</html>
